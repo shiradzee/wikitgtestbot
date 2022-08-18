@@ -1,4 +1,8 @@
 import telebot, wikipedia, re
+import os
+from dotenv import load_dotenv
+load_dotenv()
+TOKEN = os.getenv("BOT_TOKEN")
 
 # Вводим токен нашего бота.
 
