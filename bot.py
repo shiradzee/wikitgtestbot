@@ -1,12 +1,12 @@
 import telebot, wikipedia, re
 import os
-from dotenv import load_dotenv
-load_dotenv()
+from dotenv import dotenv_values
+config = dotenv_values(".env")
 TOKEN = os.getenv("BOT_TOKEN")
 
 # Вводим токен нашего бота.
 
-bot = telebot.TeleBot('5746457091:AAER5Fx_AVUuwI7QdCEYfGxX3YDK_bNVWGQ')
+bot = telebot.TeleBot('BOT_TOKEN')
 # Устанавливаем русский язык в Wikipedia
 wikipedia.set_lang("ru")
 # Чистим текст статьи в Wikipedia и ограничиваем его тысячей символов
